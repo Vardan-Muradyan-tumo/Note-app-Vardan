@@ -1,20 +1,39 @@
 <script setup>
-import { RouterView } from 'vue-router'
-import PighCounter from './components/pighCounter.vue'
-import { ref } from 'vue';
-
-const arr = ref([{
-  name: 'Luna',age: 5, count: 2
-},{
-  name: 'Mbappe',age: 26, count: 9
-}])
+import Card from './components/card.vue'
 
 </script>
 
 <template>
-  <PighCounter v-for="pigh in arr" :name="pigh.name" :age="pigh.age" :count="pigh.count"/>
+ 
 
-  <RouterView />
+<main class="main">
+<h1>Note App</h1>
+<div class="notes">
+  <Card/>
+</div>
+</main>
 </template>
 
-<style scoped></style>
+<style >
+body,
+#app{
+  width: 100%;
+  min-height: 100%;
+  color: black;
+}
+main.main{
+  background: linear-gradient(128deg, rgba(135, 246, 180, 0.84) 12.75%, rgba(50, 180, 187, 0.67) 83.4%);
+
+    width: 100%;
+  min-height: 100vh;
+}
+h1{
+  font-family: Inter;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
+</style>
