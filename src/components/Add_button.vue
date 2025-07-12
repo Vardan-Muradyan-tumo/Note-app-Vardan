@@ -1,7 +1,9 @@
 <template>
     <button class="button">+</button>
 </template>
-<script></script>
+<script setup>
+
+</script>
 <style>
 .button{
     position: fixed; 

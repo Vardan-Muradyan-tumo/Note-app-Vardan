@@ -3,17 +3,16 @@
         <div class="cls-btn">
         <close_button/>
         </div>
-        <p class="title">My title</p>
-        <p class="component">lorem isup dolor esijhdfkljhfjkasdhgdflghdlhkghhiufiufywiuihfalkj
-            fghriufgirefgiufgsdjklfgwel
-            iufgrliufgiufgewiufgwieufdkljfsldkjafgajksfgwlrkfgwirfgwiuf
-            gwiefgwifgwiegriwregt
+        <p class="title">{{ props.title }}</p>
+        <p class="component">{{props.content}}
         </p>
-        <p class="time">03.07.2025 16;30</p>
+        <p class="time">{{ props.time }}</p>
     </div>
 </template>
 <script setup>
 import close_button from './close_button.vue'
+const props= defineProps(['title','content','time'])
+import{defineProps} from 'vue'
 </script>
 <style scoped>
 .card {
