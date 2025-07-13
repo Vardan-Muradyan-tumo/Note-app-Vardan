@@ -1,18 +1,18 @@
 <template>
     <div class="card">
         <div class="cls-btn">
-        <close_button/>
+            <close_button @click="$emit('onDelete')" />
         </div>
         <p class="title">{{ props.title }}</p>
-        <p class="component">{{props.content}}
+        <p class="component">{{ props.content }}
         </p>
         <p class="time">{{ props.time }}</p>
     </div>
 </template>
 <script setup>
 import close_button from './close_button.vue'
-const props= defineProps(['title','content','time'])
-import{defineProps} from 'vue'
+const props = defineProps(['title', 'content', 'time'])
+import { defineProps } from 'vue'
 </script>
 <style scoped>
 .card {
@@ -62,17 +62,19 @@ import{defineProps} from 'vue'
     letter-spacing: 0%;
     text-align: right;
     margin-top: 50px;
-color: #797979;
+    color: #797979;
 
 }
-.cls-btn{
+
+.cls-btn {
     position: absolute;
     top: 8px;
     right: 8px;
     opacity: 0;
     transition: 0.3s;
 }
-.card:hover .cls-btn{
+
+.card:hover .cls-btn {
     opacity: 1;
 }
 </style>
